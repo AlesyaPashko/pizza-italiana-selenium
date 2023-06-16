@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MainTest">
+
+
+    <listeners>
+        <listener class-name="org.example.utils.AllureListener"></listener>
+    </listeners>
+
+    <test name="MainTest" parallel="false">
+        <classes>
+            <class name="ChangeCityTest">
+                <methods>
+                    <include name="choosePinsk"/>
+                    <include name="chooseJabinka"/>
+                    <include name="chooseKobrin"/>
+                </methods>
+            </class>
+            <class name="SortingCheckTest">
+                <methods>
+                    <include name="checkSortByDescendingPrice"/>
+                    <include name="checkSortByAscendingPrice"/>
+                </methods>
+            </class>
+            <class name="BasketTest">
+                <methods>
+                    <include name="checkBacketForPrice"/>
+                    <include name="checkBacketForList"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
