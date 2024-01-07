@@ -16,7 +16,7 @@ public class SortingCheckTest extends BaseTest {
         driver = DriverManager.getDriver();
         sortingCheckSteps = new SortingCheckSteps(driver);
     }
-    @Description("Сheck the correct sorting of products by decreasing price")
+    @Description("Check the correct sorting of products by decreasing price")
     @Test(invocationCount = 3)
     public void checkSortByDescendingPrice() {
         sortingCheckSteps.choosePizzaMenu();
@@ -25,7 +25,7 @@ public class SortingCheckTest extends BaseTest {
         sortingCheckSteps.checkRightSortingDescendingPrice();
         Assert.assertTrue(sortingCheckSteps.checkRightSortingDescendingPrice()[0] >= sortingCheckSteps.checkRightSortingDescendingPrice()[1]);
     }
-    @Description("Сheck the correct sorting of products by ascending price")
+    @Description("Check the correct sorting of products by ascending price")
     @Test(invocationCount = 3)
     public void checkSortByAscendingPrice() {
         sortingCheckSteps.choosePizzaMenu();
